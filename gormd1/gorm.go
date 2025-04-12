@@ -5,8 +5,8 @@ import (
 	"database/sql"
 	"strings"
 
-	d1 "github.com/kofj/gorm-driver-d1"
-	_ "github.com/kofj/gorm-driver-d1/stdlib"
+	d1 "github.com/yukange/gorm-driver-d1"
+	_ "github.com/yukange/gorm-driver-d1/stdlib"
 
 	"gorm.io/gorm"
 	"gorm.io/gorm/callbacks"

@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	d1 "github.com/kofj/gorm-driver-d1"
+	d1 "github.com/yukange/gorm-driver-d1"
 )
 
 var defaultTimeFields = []string{

@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/joho/godotenv"
-	d1 "github.com/kofj/gorm-driver-d1"
-	"github.com/kofj/gorm-driver-d1/gormd1"
-	_ "github.com/kofj/gorm-driver-d1/stdlib"
+	d1 "github.com/yukange/gorm-driver-d1"
+	"github.com/yukange/gorm-driver-d1/gormd1"
+	_ "github.com/yukange/gorm-driver-d1/stdlib"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 )

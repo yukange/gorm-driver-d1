@@ -14,7 +14,7 @@ current support date types list.
 | float32,float64 | Number | ✅ ||
 | string | String| ✅ | |
 | []byte | String | ✅ | auto convert between unicode escape and bytes|
-| time.Time| String | ⚠️ | if column name in `github.com/kofj/gorm-driver-d1/stdlib.defaultTimeFields` slice. |
+| time.Time| String | ⚠️ | if column name in `github.com/yukange/gorm-driver-d1/stdlib.defaultTimeFields` slice. |
 
 
 ## Useage
@@ -26,8 +26,8 @@ import (
 	"database/sql"
 	"fmt"
 
-	d1 "github.com/kofj/gorm-driver-d1"
-	_ "github.com/kofj/gorm-driver-d1/stdlib"
+	d1 "github.com/yukange/gorm-driver-d1"
+	_ "github.com/yukange/gorm-driver-d1/stdlib"
 	log "github.com/sirupsen/logrus"
 )
 

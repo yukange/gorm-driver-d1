@@ -77,7 +77,7 @@ func TestMigrator(t *testing.T) {
 
 	var createdAt, updatedAt time.Time
 	t.Run("Create", func(t *testing.T) {
-		var user = &User{Name: "kofj", Age: 18, Active: true, Bin: bin1, Wallet: 100.08}
+		var user = &User{Name: "yukange", Age: 18, Active: true, Bin: bin1, Wallet: 100.08}
 		var err = gdb.Create(user).Error
 		if err != nil {
 			t.Errorf("failed to create record: %v", err)
@@ -96,7 +96,7 @@ func TestMigrator(t *testing.T) {
 			return
 		}
 		t.Logf("find user: %#+v", user)
-		assert.Equalf(t, "kofj", user.Name, "user name")
+		assert.Equalf(t, "yukange", user.Name, "user name")
 		assert.Equalf(t, bin1, user.Bin, "user bin not equal")
 		assert.Truef(t, user.Active, "active")
 		assert.Equal(t, 100.08, user.Wallet)
@@ -107,7 +107,7 @@ func TestMigrator(t *testing.T) {
 	t.Run("Update", func(t *testing.T) {
 		var tx = gdb.Model(&User{}).Where("id = ?", 1).Updates(
 			map[string]interface{}{
-				"name": "kofj1", "active": false, "bin": bin2,
+				"name": "yukange1", "active": false, "bin": bin2,
 			},
 		)
 		var err = tx.Error
@@ -120,7 +120,7 @@ func TestMigrator(t *testing.T) {
 		var nuser = &User{}
 		nuser.ID = 1
 		gdb.First(nuser)
-		assert.Equalf(t, "kofj1", nuser.Name, "user name")
+		assert.Equalf(t, "yukange1", nuser.Name, "user name")
 		assert.Equalf(t, bin2, nuser.Bin, "user bin not equal")
 		assert.Falsef(t, nuser.Active, "active")
 		assert.Equalf(t, createdAt, nuser.CreatedAt, "CreatedAt not equal")

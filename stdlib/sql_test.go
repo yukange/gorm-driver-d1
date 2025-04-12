@@ -12,8 +12,8 @@ import (
 	"time"
 
 	"github.com/joho/godotenv"
-	d1 "github.com/kofj/gorm-driver-d1"
-	_ "github.com/kofj/gorm-driver-d1/stdlib"
+	d1 "github.com/yukange/gorm-driver-d1"
+	_ "github.com/yukange/gorm-driver-d1/stdlib"
 	log "github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 )

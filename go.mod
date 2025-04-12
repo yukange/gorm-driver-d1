@@ -1,4 +1,4 @@
-module github.com/kofj/gorm-driver-d1
+module github.com/yukange/gorm-driver-d1
 
 go 1.21.0
 
